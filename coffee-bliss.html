@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coffee Bliss</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdfbf7;
+      color: #3e3e3e;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #4b2e2e;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero {
+      position: relative;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      opacity: 0.85;
+      border-radius: 5px;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -40%);
+      color: white;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+    }
+
+    .hero-text p {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      background: white;
+      color: #4b2e2e;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: #f3e5ab;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .menu-grid {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 1rem 0 0.5rem;
+    }
+
+    .card p {
+      font-size: 14px;
+      padding: 0 1rem;
+    }
+
+    .card span {
+      display: block;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+
+    .about, .contact {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+    .menu{
+      color:rgb(56, 22, 22);
+    }
+    form {
+      max-width: 500px;
+      margin: 2rem auto;
+      text-align: left;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: #4b2e2e;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact-info {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+    footer {
+      background: #4b2e2e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      .menu-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      form {
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">☕ Coffee Bliss</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="https://i.pinimg.com/736x/c4/1b/22/c41b2282239a31a75a4ba6d35226e656.jpg" alt="Coffee Shop">
+    <div class="hero-text">
+      <h1>Welcome to Coffee Bliss</h1>
+      <p>Your perfect cup of coffee is just a sip away.</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+  </section>
+
+  <section class="intro">
+    <h2>Your Daily Dose of Joy</h2>
+    <p>We serve handcrafted coffee made with premium beans from around the world. Relax in our cozy space or grab a cup on the go.</p>
+  </section>
+
+  <section id="menu">
+  <h2 style="text-align:center;">Our Menu</h2>
+
+  <!-- 🔥 HOT COFFEES -->
+  <h3 class = "menu" style="margin-top:2rem; text-align:center;">Hot Coffees</h3>
+  <div class="menu-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Espresso">
+      <h3>Espresso</h3>
+      <p>Bold and rich, a classic favorite.</p>
+      <span>$3.00</span>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/bd/de/a0/bddea0e4dbe2f7a9cffa8cab5194cb74.jpg" alt="Latte">
+      <h3>Latte</h3>
+      <p>Silky smooth with steamed milk.</p>
+      <span>$4.50</span>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/bb/b7/10/bbb710a8baa4d3ca18c60a5f670dee1d.jpg" alt="Americano">
+      <h3>Americano</h3>
+      <p>Espresso diluted with hot water. Simple and bold.</p>
+      <span>$3.50</span>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/05/13/d5/0513d5e3993547ac73599778ddf82abd.jpg" alt="Flat White">
+      <h3>Flat White</h3>
+      <p>Velvety steamed milk poured over a double shot of espresso.</p>
+      <span>$4.20</span>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/5e/d0/34/5ed0349fcaff668be8fce7e743468109.jpg" alt="Cortado">
+      <h3>Cortado</h3>
+      <p>A balanced mix of espresso and warm milk — smooth and rich.</p>
+      <span>$3.75</span>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/de/f7/f2/def7f219799a4abeae2f3c63922077ff.jpg" alt="Macchiato">
+      <h3>Macchiato</h3>
+      <p>Espresso topped with a small amount of foamed milk.</p>
+      <span>$3.25</span>
+    </div>
+  </div>
+
+  <!-- 🧊 ICED COFFEES -->
+  <h3 class = "menu" style="margin-top:3rem; text-align:center;">Iced Coffees</h3>
+  <div class="menu-grid">
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/cc/cb/00/cccb00473890ed242fff3e0c66d3ff33.jpg" alt="Iced Latte">
+      <h3>Iced Latte</h3>
+      <p>Espresso served over cold milk and ice.</p>
+      <span>$4.00</span>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/e2/1e/1e/e21e1e6c6d6c1e712de14547d2603cc9.jpg" alt="Cold Brew">
+      <h3>Cold Brew</h3>
+      <p>Steeped slowly in cold water for a smooth finish.</p>
+      <span>$4.50</span>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/b0/a2/79/b0a279181d5e9e49fe47005c6f7320f2.jpg" alt="Iced Americano">
+      <h3>Iced Americano</h3>
+      <p>Espresso mixed with cold water and ice. Strong & cool.</p>
+      <span>$3.80</span>
+    </div>
+  </div>
+
+  <!-- 🎨 SPECIALTY DRINKS -->
+  <h3 class = "menu" style="margin-top:3rem; text-align:center; " >Specialty Drinks</h3>
+  <div class="menu-grid">
+    <div class="card">
+      <img src="https://i.pinimg.com/1200x/58/19/66/581966af7894ffe7a5e23aa118afbc44.jpg" alt="Caramel Latte">
+      <h3>Caramel Latte</h3>
+      <p>Espresso, steamed milk, and sweet caramel syrup.</p>
+      <span>$4.90</span>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/1a/24/c7/1a24c7a60a7ccfd31bed212b59765cf5.jpg" alt="Hazelnut Mocha">
+      <h3>Hazelnut Mocha</h3>
+      <p>Chocolate and hazelnut flavors blended with espresso.</p>
+      <span>$5.25</span>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/c9/80/69/c980695880233f17709dd68fc64dc168.jpg" alt="Pumpkin Spice Latte">
+      <h3>Pumpkin Spice Latte</h3>
+      <p>Espresso with pumpkin, cinnamon, nutmeg & clove flavors.</p>
+      <span>$5.00</span>
+    </div>
+  </div>
+</section>
+
+  <section id="about" class="about">
+    <h2>About Coffee Bliss</h2>
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Shop Image">
+    <p>Coffee Bliss began in 2020 to bring people together over coffee. From bean to brew, our mission is to deliver comfort in a cup.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> hello@coffeebliss.com</p>
+      <p><strong>Phone:</strong> +91-9876543210</p>
+      <p><strong>Location:</strong> 123 Bean Street, Brew City</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Coffee Bliss. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
